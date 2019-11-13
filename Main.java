@@ -4,29 +4,29 @@ class Main {
   public static void main(String[] args) {
     String keys;
     String value;
-    String[] rezString;
-    int counterRezString = 0;
-    
+    String[] resultArray;
+        
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter the string");
     keys = scanner.nextLine();
 
-    rezString = new String[keys.length()- keys.replace("1", "").length()];
+    resultArray = new String[keys.replace("0", "").length()];
 
     System.out.println("Enter array");
-    
+
+    int counterResultArray = 0;
     for(int i = 0; i < 9; i++){
       value = scanner.nextLine();
       if(keys.charAt(i) == '1'){
-        rezString[counterRezString] = value;
-        counterRezString++;
+        resultArray[counterResultArray] = value;
+        counterResultArray++;
       }
     }
     scanner.close();
 
     System.out.println();
     System.out.print("[");
-    for(String i:rezString){
+    for(String i:resultArray){
       System.out.print("\"" + i + "\"" + ",");
     }
     System.out.print("]");
