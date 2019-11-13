@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 class Main {
   public static void main(String[] args) {
@@ -25,10 +26,6 @@ class Main {
     scanner.close();
 
     System.out.println();
-    System.out.print("[");
-    for(String i:resultArray){
-      System.out.print("\"" + i + "\"" + ",");
-    }
-    System.out.print("]");
+    System.out.println(Arrays.toString(resultArray));
   }
 }
